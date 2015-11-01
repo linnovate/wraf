@@ -1,0 +1,24 @@
+{
+  "name": "frontend-template",
+  "version": "1.0.0",
+  "description": "frontend-template",
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-connect": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.19.0",
+    "gulp-util": "latest",
+    "node-sass": "^3.4.0",
+    "path": "^0.12.7",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.12.4",
+    "webpack": "latest",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
