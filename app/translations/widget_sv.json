@@ -1,0 +1,12 @@
+{
+  "upcoming" : "Kommande shower",
+  "local" : "Lokala datum",
+  "track" : "Spåra artist",
+  "no-shows-upcoming-title" : "Inga kommande shower",
+  "no-shows-local-title" : "Inga lokala shower",
+  "no-shows-upcoming" : "{{name}} har inga kommande shower.",
+  "no-shows-local" : "Inga lokala stopp på {{name}}s turné",
+  "no-shows-line-2" : "Meddela med när {{name}} kommer till stan",
+  "show-more" : "Visa mer",
+  "rsvp" : "Svara"
+}

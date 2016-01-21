@@ -1,0 +1,12 @@
+{
+  "upcoming" : "공연소식",
+  "local" : "일정",
+  "track" : "아티스트",
+  "no-shows-upcoming-title" : "예정된 공연이 없습니다.",
+  "no-shows-local-title" : "예정된 공연이 없습니다.",
+  "no-shows-upcoming" : "{{name}}의 공연 소식 업데이트를 기다려주세요!",
+  "no-shows-local" : "{{name}}의 공연 소식 업데이트를 기다려주세요!",
+  "no-shows-line-2" : "{{name}} 공연 소식 받기 >>",
+  "show-more" : "더보기",
+  "rsvp" : "예약"
+}

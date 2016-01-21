@@ -1,0 +1,12 @@
+{
+  "upcoming" : "Kommende konserter",
+  "local" : "Lokale datoer",
+  "track" : "Finn artist",
+  "no-shows-upcoming-title" : "Ingen kommende konserter",
+  "no-shows-local-title" : "Ingen lokale konserter",
+  "no-shows-upcoming" : "{{name}} har ingen kommende konserter.",
+  "no-shows-local" : "Ingen lokale stop på {{name}} sin turné",
+  "no-shows-line-2" : "Oppdater meg når {{name}} kommer til byen",
+  "show-more" : "Vis mer",
+  "rsvp" : "RSVP"
+}

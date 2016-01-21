@@ -1,0 +1,12 @@
+{
+  "upcoming" : "Próximos conciertos",
+  "local" : "Fechas locales",
+  "track" : "Seguir artista",
+  "no-shows-upcoming-title" : "No hay próximos conciertos",
+  "no-shows-local-title" : "No hay conciertos locales",
+  "no-shows-upcoming" : "{{name}} no tiene ningún concierto próximamente.",
+  "no-shows-local" : "No hay paradas locales en el tour de {{name}}.",
+  "no-shows-line-2" : "Notificarme cuando {{name}} tenga un concierto en mi ciudad.",
+  "show-more" : "Mostrar más",
+  "rsvp" : "RSVP"
+}

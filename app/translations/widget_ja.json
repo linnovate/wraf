@@ -1,0 +1,12 @@
+{
+  "upcoming" : "ライブ情報",
+  "local" : "ローカル",
+  "track" : "ライブ情報をメールで受信",
+  "no-shows-upcoming-title" : "ライブ情報はありません",
+  "no-shows-local-title" : "ライブ情報はありません",
+  "no-shows-upcoming" : "現在 {{name}} のライブ情報はありません",
+  "no-shows-local" : "お住まいの地域のライブはありません",
+  "no-shows-line-2" : "ライブ情報をメールで受信",
+  "show-more" : "もっと見る",
+  "rsvp" : "予約"
+}

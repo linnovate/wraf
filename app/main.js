@@ -1,20 +1,16 @@
-
-
-
 import AppTools from './services/AppTools';
 
 window.AppTools = AppTools;
 
-import AppManager from './services/AppManager';
-import ApiService from './services/ApiService';
- 
-import appContentComponent from './states/main/appContentComponent';
+import appContentComponent from './components/appContentComponent';
 
 
+function handleEvent (event) {
+  console.log(event);
+};
 
-AppManager.routesList['#home'] = (e) => { console.log(e, location, location.hash) };
-AppManager.routesList['#about'] = (e) => { console.log(e, location, location.hash) };
+Wix.addEventListener(Wix.Events.SETTINGS_UPDATED, handleEvent);
 
-
-
-require("./assets/styles/style.css")
+if (Wix.Utils.getViewMode() !== 'standalone') {
+   console.log("wix.Utils.getInstanceId: ",Wix.Utils.getInstanceId());
+} 

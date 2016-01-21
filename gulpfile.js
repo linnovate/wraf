@@ -12,36 +12,52 @@ var webpackDevServer = require('webpack-dev-server');
 gulp.task('default', ['webpack:livereload','webServer']);
 
 
-var config = {
+var module = {
+	loaders: [{
+	    test: /\.css$/,
+	    loader: "style!css"
+	},{
+	    test: /\.scss$/,
+	    loaders: "sass!style!css"
+	},{
+	    test: /\.js$/,
+	    loader: "babel"
+	}]
+};
+
+var config_app = {
     entry: {
-       app: ["./app/main.js"]
+       app: ["./app/main"]
     },
     output: {
         path: path.resolve(__dirname, "./"),
         filename: "scripts.bundle.js"
     },
-    module: {
-        loaders: [{
-            test: /\.css$/,
-            loader: "style!css"
-        },{
-            test: /\.scss$/,
-            loaders: "sass!style!css"
-        },{
-            test: /\.js$/,
-            loader: "babel"
-        }]
-    }
+    module: module
+};
+
+var config_appSettings = {
+    entry: {
+       app: ["./app-settings/main"]
+    },
+    output: {
+        path: path.resolve(__dirname, "./"),
+        filename: "scripts.bundle.js"
+    },
+    module: module
 };
 
 
 // get memory file
 gulp.task('webpack:livereload', function(callback) {
 
-    //config.entry.app.unshift("scripts.bundle.js?http://localhost:9090");
-    var compiler = webpack(config);
+    var compiler = webpack(config_app);
     var server = new webpackDevServer(compiler);
     server.listen(9090,'localhost');
+
+    var compiler = webpack(config_appSettings);
+    var server = new webpackDevServer(compiler);
+    server.listen(9091,'localhost');
 
 });
 
@@ -67,3 +83,5 @@ gulp.task('webServer', function() {
         port:'3000'
     });
 });
+
+module.exports = gulp;

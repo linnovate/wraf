@@ -1,0 +1,12 @@
+{
+  "upcoming" : "Upcoming Shows",
+  "local" : "Local Dates",
+  "track" : "Track Artist",
+  "no-shows-upcoming-title" : "No Upcoming Shows",
+  "no-shows-local-title" : "No Local Shows",
+  "no-shows-upcoming" : "{{name}} doesn't have any upcoming shows.",
+  "no-shows-local" : "No local stops on {{name}}'s tour",
+  "no-shows-line-2" : "Notify me when  {{name}} coming to town",
+  "show-more" : "Show More",
+  "rsvp" : "RSVP"
+}

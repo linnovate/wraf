@@ -1,0 +1,12 @@
+{
+  "upcoming" : "Nye shows",
+  "local" : "Shows i dit område",
+  "track" : "Single kunstner",
+  "no-shows-upcoming-title" : "Ingen nye shows",
+  "no-shows-local-title" : "Ingen shows i dit område",
+  "no-shows-upcoming" : "{{name}} har ingen nye shows.",
+  "no-shows-local" : "Ingen shows i dit område på følgende turne: {{name}}",
+  "no-shows-line-2" : "Kontakt mig, hvis {{name}} kommer til byen",
+  "show-more" : "Vis mere",
+  "rsvp" : "s.u."
+}

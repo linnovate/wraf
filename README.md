@@ -1,3 +1,1 @@
-sudo npm install 
-
-gulp 
+# wraf

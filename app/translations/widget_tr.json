@@ -1,0 +1,12 @@
+{
+  "upcoming" : "Gelecek Gösteriler",
+  "local" : "Yerel Tarihler",
+  "track" : "Sanatçıyı Takip Et",
+  "no-shows-upcoming-title" : "Yakın Zamanda Hiç Gösteri Yok",
+  "no-shows-local-title" : "Hiç Yerel Gösteri Yok",
+  "no-shows-upcoming" : "{{name}}: Yakın zamanda hiç gösterisi yok.",
+  "no-shows-local" : "{{name}}: yakın zamanda hiç yerel gösterisi yok",
+  "no-shows-line-2" : "{{name}}: yerel bir gösterisi olduğunda bana haber ver",
+  "show-more" : "Daha Fazla Göster",
+  "rsvp" : "LCV"
+}
