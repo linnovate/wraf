@@ -1,5 +1,7 @@
 "use strict";
-
+ 
+var ddddd=' ';
+ 
 import HeaderComponent from './headerComponent';
 import FooterComponent from './footerComponent';
 

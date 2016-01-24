@@ -1,7 +1,7 @@
 import AppTools from './services/AppTools';
-
-window.AppTools = AppTools;
-
+   
+window.AppTools = AppTools; 
+ //ss
 import appContentComponent from './components/appContentComponent';
 
 
