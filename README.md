@@ -17,5 +17,6 @@ We started developing tpa's (third party applications) for wix and found that we
 2. 
 
 ## Wix Subsystems
-1. Collections
-2. Media
+1. Dashboards
+2. [Collections](wix/collections)
+3. Media
