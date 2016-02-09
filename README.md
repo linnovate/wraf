@@ -14,3 +14,8 @@ We started developing tpa's (third party applications) for wix and found that we
 ## Structure 
 1. app - widget 
 1. app-settings - settings
+2. 
+
+## Wix Subsystems
+1. Collections
+2. Media
