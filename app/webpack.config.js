@@ -23,6 +23,5 @@ module.exports = {
 		    loader: "babel"
 		}
 	    ]
-    },
-    port:8081
+    }
 };

@@ -1,7 +1,5 @@
 
 
-import React from '../../bower_components/react';
-
 class MyStyle extends React.Component {
   render() {
     return <my-style dangerouslySetInnerHTML={{__html:this.props.style}}></my-style>;
@@ -39,7 +37,7 @@ class GUI_myCss extends React.Component {
                 <my-options class="options">
                    {this.state.options.map((item) =>
                         <button onClick={() => this.click_option(item)}>{item}</button>
-                   )}
+                   )} 
                 </my-options>
                 <MyStyle {...this.state} />
             </div>;
@@ -48,4 +46,4 @@ class GUI_myCss extends React.Component {
 }
 
 
-React.render(<GUI_myCss/>, document.getElementById('x-mycss'));
+React.render(<GUI_myCss/>, document.getElementsByTagName('app-content')[0]);

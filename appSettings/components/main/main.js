@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 class ArticleCaptcha extends HTMLElement {
 
 

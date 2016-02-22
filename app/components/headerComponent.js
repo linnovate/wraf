@@ -1,15 +1,5 @@
 "use strict";
  
-  
-//import facebookLike from '../../../components/facebookLike'; 
-//import formSearch from '../../../components/formSearch';
-
-
-// import "./header/header.scss"
- require("./main/main.css"); 
-//require("./header/header.scss");
-
-
 class HeaderComponent extends HTMLElement {
 
     createdCallback() {

@@ -19,7 +19,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "cd app && webpack-dev-server --hot --inline --port=8080",
-    "run": "cd appSettings && webpack-dev-server --hot --inline --port=8081"
+    "start": "cd app && webpack-dev-server --hot --inline --port=8080 & cd appSettings && webpack-dev-server --hot --inline --port=8081"
   }
 }
