@@ -3,7 +3,6 @@
 module.exports = {
     entry: {
       app: ['webpack/hot/dev-server', "./main"]
-      //,appSettings: ['webpack/hot/dev-server', "./appSettings/main"]
     },
     output: {
         path: __dirname + "./",
@@ -21,9 +20,8 @@ module.exports = {
 		    loaders: "sass!style!css"
 		}, {
 		    test: /\.js$/,
-		    loader: "babel"
+		    loader: "babel?presets[]=react,presets[]=es2015"
 		}
 	    ]
-    },
-    port:8081
+    }
 };

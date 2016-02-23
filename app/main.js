@@ -1,10 +1,10 @@
 import AppTools from './services/AppTools';
    
 require("./components/main/main.css"); 
-//require("./components/main/main-scss.scss"); 
+// require("./components/main/main-scss.scss"); 
    
 window.AppTools = AppTools; 
- //ss
+
 import appContentComponent from './components/appContentComponent';
 
 

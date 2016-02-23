@@ -17,10 +17,10 @@ module.exports = {
 		}, 
 		{
 		    test: /\.scss$/,
-		    loaders: "sass!style!css"
+		    loader: "style!css!sass"
 		}, {
 		    test: /\.js$/,
-		    loader: "babel"
+		    loader: "babel?presets[]=react,presets[]=es2015"
 		}
 	    ]
     }
