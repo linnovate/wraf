@@ -1,9 +1,0 @@
-.DS_Store
-desktop.ini
-*.ipr
-*.iws
-*.iml
-node_modules/*
-.idea/
-dev/*
-dist/*

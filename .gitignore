@@ -1,17 +1,7 @@
-# --------------------
-# Node Files
-# --------------------
-.nodemonignore
+.idea/
+*.sublime-project
+*.sublime-workspace
 npm-debug.log
 node_modules/
-
-# --------------------
-# SASS Files
-# --------------------
-.sass-cache/
-
-# --------------------
-# Bower Files
-# --------------------
-.bower-*/
-bower_components
+bower_components/
+public/
