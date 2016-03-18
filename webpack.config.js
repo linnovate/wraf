@@ -24,7 +24,8 @@ const   debug = process.env.NODE_ENV !== 'production',
                 }
             },
             new webpack.DefinePlugin({
-                DEBUG: JSON.stringify(debug)
+                DEBUG: JSON.stringify(debug),
+                'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
             }),
             new webpack.ProvidePlugin({
                 _: 'lodash'
@@ -38,7 +39,23 @@ const   debug = process.env.NODE_ENV !== 'production',
             new HtmlWebpackPlugin({
                 filename: './index.html',
                 title: 'Wix Test Application',
-                chunks: ['app', 'common']
+                chunks: ['app', 'common'],
+                // Required
+                inject: false,
+                template: './index.ejs',
+                // Optional
+                mobile: true,
+                //appMountId: 'app',
+                //baseHref: 'http://example.com/awesome',
+                /*googleAnalytics: {
+                    trackingId: 'UA-XXXX-XX',
+                    pageViewOnLoad: true
+                },*/
+                /*window: {
+                    env: {
+                        apiHost: 'http://myapi.com/api/v1'
+                    }
+                }*/
             }),
             new HtmlWebpackPlugin({
                 filename: './settings.html',
@@ -51,7 +68,7 @@ module.exports = {
     context: path.join(__dirname, 'frontend'),
     entry: {
         app:        ['./app/index'],
-        settings:   ['./settings/index']
+        //settings:   ['./settings/index']
     },
     output: {
         path:           path.join(__dirname, 'public'),
@@ -88,7 +105,8 @@ module.exports = {
             { test: /simple-collections.js$/,       loader: 'exports?$cll' },
             { test: /Wix.js$/,                      loader: 'exports?Wix' },
             { test: /wix-ui-lib2\/ui-lib.js$/,      loader: 'imports?jQuery=jquery' },
-            { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
+            { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+            { test: /\.ejs$/, loader: 'ejs' }
         ]
     },
     postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
