@@ -6,7 +6,7 @@ import Cll          from "wix-collections";
 import Header       from "./Header/Wrap";
 
 import "bootstrap-loader";
-import "./main.css";
+import "../common/style/common.scss";
 
 export default class Layout extends React.Component {
     constructor() {

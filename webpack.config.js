@@ -28,7 +28,12 @@ const   debug = process.env.NODE_ENV !== 'production',
                 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
             }),
             new webpack.ProvidePlugin({
-                _: 'lodash'
+                _: 'lodash',
+                jQuery: 'jquery',
+                $: 'jquery',
+                //"window.jQuery": "jquery",
+                //Wix: 'wix',
+                //"window.Wix": "wix"
             }),
             new webpack.ResolverPlugin(
                 new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('.bower.json', ['main'])
@@ -42,7 +47,7 @@ const   debug = process.env.NODE_ENV !== 'production',
                 chunks: ['app', 'common'],
                 // Required
                 inject: false,
-                template: './index.ejs',
+                template: './app/common/tpl/index.ejs',
                 // Optional
                 mobile: true,
                 //appMountId: 'app',
@@ -60,7 +65,10 @@ const   debug = process.env.NODE_ENV !== 'production',
             new HtmlWebpackPlugin({
                 filename: './settings.html',
                 title: 'Wix Settings',
-                chunks: ['settings', 'common']
+                chunks: ['settings', 'common'],
+                // Required
+                inject: false,
+                template: './settings/common/tpl/index.ejs'
             })
         ];
 
@@ -68,7 +76,7 @@ module.exports = {
     context: path.join(__dirname, 'frontend'),
     entry: {
         app:        ['./app/index'],
-        //settings:   ['./settings/index']
+        settings:   ['./settings/index']
     },
     output: {
         path:           path.join(__dirname, 'public'),
@@ -104,7 +112,8 @@ module.exports = {
                 loader: debug ? 'file?name=assets/[path][name].[hash:6].[ext]' : 'file?name=assets/[hash].[ext]' },
             { test: /simple-collections.js$/,       loader: 'exports?$cll' },
             { test: /Wix.js$/,                      loader: 'exports?Wix' },
-            { test: /wix-ui-lib2\/ui-lib.js$/,      loader: 'imports?jQuery=jquery' },
+            { test: require.resolve("jquery"),      loader: "expose?$!expose?jQuery" },
+            //{ test: /wix-ui-lib2\/ui-lib.js$/,      loader: 'expose?$!expose?jQuery!imports?jQuery=jquery' },
             { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
             { test: /\.ejs$/, loader: 'ejs' }
         ]
