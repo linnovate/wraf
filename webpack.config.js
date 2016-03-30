@@ -30,13 +30,10 @@ const   debug = process.env.NODE_ENV !== 'production',
             new webpack.ProvidePlugin({
                 _: 'lodash',
                 jQuery: 'jquery',
-                $: 'jquery',
-                //"window.jQuery": "jquery",
-                //Wix: 'wix',
-                //"window.Wix": "wix"
+                $: 'jquery'
             }),
             new webpack.ResolverPlugin(
-                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('.bower.json', ['main'])
+                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
             ),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common'
@@ -91,8 +88,7 @@ module.exports = {
         ],
         alias: {
             'wix$': 'wix/js-sdk/Wix',
-            'wix-collections$': 'wix/simple-collections-client/build/simple-collections',
-            'wix-ui$': 'wix-ui-lib2/ui-lib'
+            'wix-collections$': 'wix/simple-collections-client/build/simple-collections'
         }
     },
     module: {
@@ -113,10 +109,10 @@ module.exports = {
             { test: /simple-collections.js$/,       loader: 'exports?$cll' },
             { test: /Wix.js$/,                      loader: 'exports?Wix' },
             { test: require.resolve("jquery"),      loader: "expose?$!expose?jQuery" },
-            //{ test: /wix-ui-lib2\/ui-lib.js$/,      loader: 'expose?$!expose?jQuery!imports?jQuery=jquery' },
             { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
             { test: /\.ejs$/, loader: 'ejs' }
-        ]
+        ],
+        noParse: []
     },
     postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
     node: {

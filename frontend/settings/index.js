@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Form from "./components/form/Form";
+import Wix          from "wix";
 
-import Admin from "./components/Admin/Admin";
+const mountPoint = document.createElement('div');
+document.body.appendChild(mountPoint);
+ReactDOM.render(<Form/>, mountPoint);
 
-const app = document.createElement('div');
-document.body.appendChild(app);
-ReactDOM.render(<Admin/>, app);
+Wix.getSiteInfo(function(siteInfo) {
+    console.log('siteInfo', siteInfo);
+});
