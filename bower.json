@@ -1,0 +1,7 @@
+{
+  "name": "bower-components",
+  "private": true,
+  "dependencies": {
+    "wix-ui-lib2": "v2.1.9"
+  }
+}
