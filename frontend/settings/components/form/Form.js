@@ -3,8 +3,8 @@ import Wix          from "wix";
 import { WixImage } from "wixmedia";
 import Cll          from "wix-collections";
 // wix ui-lib2
-import "wix-ui-lib2/ui-lib";
-import "wix-ui-lib2/ui-lib.css";
+import "wix/wix-ui-lib2/ui-lib";
+import "wix/wix-ui-lib2/ui-lib.css";
 // style
 import "./style.scss";
 
@@ -65,7 +65,7 @@ export default class Form extends React.Component {
             <div>
                 <header class="box">
                     <div class="logo">
-                        <img width="86" src={require('wix-ui-lib2/images/wix_icon.png')} alt="logo"/>
+                        <img width="86" src={require('wix/wix-ui-lib2/images/wix_icon.png')} alt="logo"/>
                     </div>
                     <div class="loggedOut">
                         <p>
